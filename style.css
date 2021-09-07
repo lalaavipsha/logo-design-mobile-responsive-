@@ -1,0 +1,160 @@
+/* global/desktop view */
+/* body{ 
+  margin: 0;
+}*/
+body {
+  font-family: "Asap", sans-serif;
+  color: white;
+  background-color: #ebebeb;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  /* background-color: rgba(33, 194, 159, 0.808); */
+  min-height: 500px;
+  max-width: 1024px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 140px;
+}
+.header-container {
+  background-color: rgba(58, 49, 49, 0.973);
+  min-height: 100px;
+  /* margin-bottom: 40px; */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+header {
+  max-width: 1024px;
+  /* background-color: blueviolet; */
+  min-height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  display: flex;
+}
+.mybutton:hover {
+  background-color: rgb(124, 124, 2);
+  transition-duration: 1s;
+}
+.mybutton {
+  /* border-radius: 0px; */
+  border: white 1px solid;
+  margin-left: 20px;
+  padding: 10px 25px;
+}
+.col {
+  /*background-color:deeppink;
+    min-height: 200px;*/
+  width: 30%; /*jate mota-muti works for all*/
+  margin-bottom: 40px;
+  background-color: rgba(33, 194, 159, 0.808);
+}
+/* jate only needed ta particular device e dekhbo.(turning things on and off) */
+.hide-desktop-only {
+  display: none;
+}
+.col img {
+  width: 100%;
+  height: auto;
+}
+.col p {
+  font-size: 0.875rem; /*(14*0.625) */
+  padding: 20px 30px;
+  line-height: 1.25rem;
+}
+.col p::first-line {
+  font-weight: 700; /*or bold*/
+}
+.highlight {
+  font-weight: 700;
+  font-size: 20px;
+}
+.mobile-wrapper {
+  display: none;
+}
+/* tablet view */
+@media (max-width: 768px) {
+  .col {
+    width: 45%;
+  }
+  .hide-desktop-only {
+    display: block;
+  }
+  .container {
+    padding-top: 40px;
+  }
+  /*header {
+    display: block;
+    text-align: center;
+  }*/
+  .header-container {
+    position: relative;
+  }
+  nav {
+    display: none;
+  }
+  .logo {
+    /* min-height: 50px; */
+    padding: 40px 0px;
+  }
+  .mybutton {
+    margin-left: 0;
+  }
+  .mobile-wrapper {
+    display: block;
+    padding-right: 30px;
+  }
+  .mob-nav {
+    display: none;
+    position: absolute;
+    padding-top: 10px;
+  }
+  .navbutton {
+    display: block;
+    background-color: darkorange;
+    padding: 15px 30px;
+    margin-left: -70px;
+    text-align: center;
+}
+/* mobile view */
+@media (max-width: 400px) {
+  /*400-360 newa better*/
+  .col {
+    width: 100%;
+  }
+  .hide-mobile-only {
+    display: none;
+  }
+  /*.container {
+    padding-top: 40px;
+  }
+  header {
+    display: block;
+    text-align: center;
+  }
+  .header-container {
+    position: relative;
+  }
+  nav {
+    display: block;
+  }
+  .logo {
+    /* min-height: 50px; 
+    padding: 40px 0;
+  }
+  .mybutton {
+    margin-left: 0;
+  }*/
+}
